@@ -2,7 +2,7 @@
   <div class="container-fluid p-0">
     <div id="bannerCarousel"></div>
 
-    <!-- Who We Are -->
+    <!-- Who We Are  -->
     <section class="container-fluid bg-gray pt-md-extra" id="who-we-are">
       <div class="row">
         <img src="assets/img/who-we-are-collage.png" alt="Who we are image"
