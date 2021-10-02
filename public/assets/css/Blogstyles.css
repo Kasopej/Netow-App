@@ -1,0 +1,821 @@
+/* Nav Bar */
+.bg-brand {background-color: #20345c;}
+.bg-none {background-color: transparent !important;}
+nav li a {font-size: 14px; font-weight: 500;}
+a:hover {text-decoration: none;}
+.navbar {z-index: 100;}
+.navbar-brand{ 
+  padding: 0.1rem 0.5rem;
+  border: solid 1px white;
+  border-radius: 6px;
+  background-color: white;
+}
+.fa-search {
+    color: white;
+}
+.navbar .navbar-nav .nav-item .nav-link {color: white; font-weight: 500;}
+.search-form {position: relative;
+              
+}
+.search-form input {
+  width: 12rem !important;
+  border-radius: 30px;
+}
+
+.search-button{
+  position: absolute;
+  right: 0px;
+  bottom: -2px;
+  color: white;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+
+.mainimg {
+    background: #1F365C;
+    height: 500px;
+    margin-top: -25px;
+    position: relative;
+}
+
+.main {
+    text-align: center;
+    margin-top: 0px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    font-size: 37px;
+    padding-top: 50px;
+    width: 38%;
+    text-align: center;
+}
+
+.bookdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.book1 {
+    height: 350px;
+    width: 250px;
+}
+
+.book2 {
+    height: 350px;
+    width: 250px;
+}
+
+.book3 {
+    height: 350px;
+    width: 250px;
+}
+
+.book4 {
+    height: 350px;
+    width: 250px;
+}
+
+.mainimg2 {
+    background: rgba(248, 245, 242, 0.97);
+    height: 1900px;
+}
+
+.careerdiv {
+    padding-top: 300px;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.careerhead1 {
+    width: 70%;
+    font-size: 23px;
+}
+
+.careertexts {
+    display: flex;
+    margin-top: 0px;
+}
+
+.careertext1 {
+    color: red;
+}
+
+.boxed3 {
+    width: 30%;
+    text-align: center;
+}
+
+.careerdiv2 {
+    padding-top: 100px;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.careerhead3 {
+    width: 70%;
+    font-size: 23px;
+}
+
+.careerdiv3 {
+    padding-top: 100px;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.careerhead4 {
+    width: 60%;
+    font-size: 18px;
+}
+
+.footer {
+    background: #1F365C;
+    height: 380px;
+    color: #fff;
+}
+
+.footerdiv {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    grid-gap: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footerdiv a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footerdiv a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.buttondiv {
+    margin-right: 80px;
+}
+
+.netowbtn {
+    width: 130px;
+    height: 35px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.officediv {
+    line-height: 30px;
+}
+
+.linkdiv {
+    line-height: 30px;
+}
+
+.address {
+    width: 70%;
+}
+
+.socialdiv {
+    margin-left: 80px;
+}
+
+.overalltextdiv {
+    display: flex;
+    grid-gap: 20px;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* for responsiveness */
+@media only screen and (max-width: 280px) {
+.mainimg {
+    height: 1650px;
+}
+
+.head {
+    font-size: 20px;
+    width: 70%;
+}
+
+.bookdiv {
+    flex-direction: column;
+}
+
+.book1div {
+    display: flex;
+    justify-content: center;
+}
+
+.book2div {
+    display: flex;
+    justify-content: center;
+}
+
+.book3div {
+    display: flex;
+    justify-content: center;
+}
+
+.book4div {
+    display: flex;
+    justify-content: center;
+}
+
+.mainimg2 {
+    height: 2450px;
+}
+
+.careerdiv {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerimgdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg {
+    width: 265px;
+    height: 300px;
+}
+
+.careerhead1div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead1 {
+    text-align: center;
+}
+
+.careertexts {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead2 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.careertext2 {
+    display: flex;
+    justify-content: center;
+}
+
+.boxed3 {
+    width: 100%;
+}
+
+.careerimg2div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg2 {
+    width: 265px;
+    height: 300px;
+}
+
+.careerdiv2 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead3 {
+    text-align: center;
+}
+
+.careerdiv3 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead4div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead4 {
+    text-align: center;
+}
+
+.careerimg3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg3 {
+    width: 265px;
+    height: 300px;
+}
+
+.footer {
+    height: 730px;
+}
+
+.footerdiv {
+    flex-direction: column;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+
+.headdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.address {
+    width: 50%;
+    text-align: center;
+}
+
+.textdiv2 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv3 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv4 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv5 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv6 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv7 {
+    display: flex;
+    justify-content: center;
+}
+
+.socialdiv {
+    margin-left: 0px;
+}
+
+.overalltextdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    text-align: center;
+}
+}
+
+@media only screen and (max-width: 480px) {
+.mainimg {
+    height: 1650px;
+}
+    
+.head {
+    font-size: 20px;
+    width: 70%;
+}
+
+.bookdiv {
+    flex-direction: column;
+}
+
+.book1div {
+    display: flex;
+    justify-content: center;
+}
+
+.book2div {
+    display: flex;
+    justify-content: center;
+}
+
+.book3div {
+    display: flex;
+    justify-content: center;
+}
+
+.book4div {
+    display: flex;
+    justify-content: center;
+}
+
+.mainimg2 {
+    height: 2450px;
+}
+
+.careerdiv {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerimgdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg {
+    width: 265px;
+    height: 300px;
+}
+
+.careerhead1div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead1 {
+    text-align: center;
+}
+
+.careertexts {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead2 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.careertext2 {
+    display: flex;
+    justify-content: center;
+}
+
+.boxed3 {
+    width: 100%;
+}
+
+.careerimg2div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg2 {
+    width: 265px;
+    height: 300px;
+}
+
+.careerdiv2 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead3 {
+    text-align: center;
+}
+
+.careerdiv3 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead4div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead4 {
+    text-align: center;
+}
+
+.careerimg3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg3 {
+    width: 265px;
+    height: 300px;
+}
+
+.footer {
+    height: 730px;
+}
+
+.footerdiv {
+    flex-direction: column;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+
+.headdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.address {
+    width: 50%;
+    text-align: center;
+}
+
+.textdiv2 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv3 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv4 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv5 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv6 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv7 {
+    display: flex;
+    justify-content: center;
+}
+
+.socialdiv {
+    margin-left: 0px;
+}
+
+.overalltextdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    text-align: center;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.mainimg {
+    height: 1650px;
+}
+        
+.head {
+    font-size: 20px;
+    width: 70%;
+}
+
+.bookdiv {
+    flex-direction: column;
+}
+
+.book1div {
+    display: flex;
+    justify-content: center;
+}
+
+.book2div {
+    display: flex;
+    justify-content: center;
+}
+
+.book3div {
+    display: flex;
+    justify-content: center;
+}
+
+.book4div {
+    display: flex;
+    justify-content: center;
+}
+
+.mainimg2 {
+    height: 2450px;
+}
+
+.careerdiv {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerimgdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg {
+    width: 265px;
+    height: 300px;
+}
+
+.careerhead1div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead1 {
+    text-align: center;
+}
+
+.careertexts {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead2 {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.careertext2 {
+    display: flex;
+    justify-content: center;
+}
+
+.boxed3 {
+    width: 100%;
+}
+
+.careerimg2div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg2 {
+    width: 265px;
+    height: 300px;
+}
+
+.careerdiv2 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead3 {
+    text-align: center;
+}
+
+.careerdiv3 {
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.careerhead4div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerhead4 {
+    text-align: center;
+}
+
+.careerimg3div {
+    display: flex;
+    justify-content: center;
+}
+
+.careerimg3 {
+    width: 265px;
+    height: 300px;
+}
+
+.footer {
+    height: 730px;
+}
+
+.footerdiv {
+    flex-direction: column;
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+}
+
+
+.headdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.address {
+    width: 50%;
+    text-align: center;
+}
+
+.textdiv2 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv3 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv4 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv5 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv6 {
+    display: flex;
+    justify-content: center;
+}
+
+.textdiv7 {
+    display: flex;
+    justify-content: center;
+}
+
+.socialdiv {
+    margin-left: 0px;
+}
+
+.overalltextdiv {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    text-align: center;
+}
+}
+/* End of style */
+

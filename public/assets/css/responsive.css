@@ -1,0 +1,106 @@
+@media screen and (min-width: 576px) { 
+  h2 {font-size: 2.5rem;}
+  
+  .home-banner {
+    padding-top: 0;
+  }
+  .home-banner .carousel-caption {
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  }
+  .banner-carousel-indicators{
+    bottom: -80px;
+  }
+  .article-heading {width: 75%;}
+}
+
+@media screen and (min-width: 768px) {  
+  .pt-md-extra {padding: 5rem 4rem !important;}
+  h2 {font-size: 3rem;}
+  
+  .home-banner {
+    margin-top: -40px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .home-banner .carousel-caption {
+    bottom: 8.5rem;
+    left: 4rem;
+    right: 4rem;
+  }
+  .banner-carousel-indicators{
+    bottom: 50px;
+  }
+  #homeServicesCarousel .carousel-inner {
+    padding: 0 3rem;
+  }
+  .home-services-carousel-items {padding: 0 2rem;}
+  .home-services-carousel-indicators{left: 20px;}
+  .mobile-section {padding-top: 8rem !important;}
+  .home-banner img {max-height: 95vh;}
+  .home-our-services {padding: 4rem 8rem 4rem 12rem !important;}
+  .brand-row {padding: 2rem 5rem;}
+  .brand-box {padding: 0.5rem !important;}
+  .brand-box .h3 {font-size: 1.5rem !important;}
+  .articles .card {padding: 0 0.5rem;}
+
+  /* Contact Page */
+  .contact-intro {padding: 5rem 20rem 20rem 20rem;}
+  .contact-main {padding: 5rem;}
+  .contact-main .row > div:first-of-type{padding: 0 10rem;}
+  .form {
+  position: relative;
+  top: -20rem;
+  } 
+  .form input[type="submit"] {font-size: 1rem;
+  }
+  .input-group {
+  padding: 2rem 0;
+  }
+  .contact-option {margin-top: -8rem;}
+  #contact-option-1 {margin-top: -8rem}
+
+  /* Services Page styling */
+.services-container {padding: 4rem 14rem;}
+.our-services-carousel-container {padding: 4rem;}
+.our-services-carousel-container .carousel-inner {padding: 4rem 8rem;}
+}
+
+
+@media screen and (min-width: 992px) { 
+  #navbarSupportedContent .nav-item {padding: 0 0.5rem;}
+  h2 {font-size: 3rem;}
+  
+  .home-banner {
+    margin-top: -75px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .home-banner .carousel-caption {
+    left: 8rem;
+    right: 8rem;
+  }
+  .banner-carousel-indicators{
+    bottom: 1px;
+  }
+  .home-our-services {padding: 5rem 12rem 5rem 16rem !important;}
+  .article-heading {width: 50%;}
+}
+
+@media screen and (min-width: 1024px) {
+  #navbarSupportedContent .nav-item {padding: 0 1rem;}
+  .home-banner .carousel-caption {
+    left: 12rem;
+    right: 12rem;
+  }
+
+}
+
+  @media screen and (min-width: 1200px) {
+  .home-banner .carousel-caption {
+    left: 16rem;
+    right: 16rem;
+  }
+  .article-heading {width: 40%;}
+}
