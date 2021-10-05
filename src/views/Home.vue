@@ -124,6 +124,24 @@
         <h5 class="text-sm w-100">Testimonials</h5>
         <h4 class="w-100 text-bold">What Clients Say</h4>
       </div>
+      <div class="row pb-4">
+        <div class="col-12 col-md-4 pb-4 pb-md-1 testimonials-box">
+          <blockquote>
+            <i class="fa fa-quote-right"></i>
+            <p class="text-secondary">
+              I must say one of the best decision I made while back was to join Netow Solutions software
+              testing training which has greatly impacted my life in a positive way and has help me choose a
+              career I never knew existed and I'm loving it. So if you're thinking if the right place to begin
+              your software Testing career, than think Netow Solutions.
+            </p>
+          </blockquote>
+          <div class="pointer"></div>
+          <br>
+          <img src="img/person_isabel.JPG" alt="" class="rounded-circle">
+          <p class="display-6 mb-0 mt-2 font-weight-bold">Isabel</p>
+          <p><small>Software Quality Engineer</small></p>
+        </div>
+		</div>
       <div class="row brand-row">
         <div class="col-12 col-md-6 px-md-2">
           <div class="brand-group pb-3">
@@ -218,6 +236,32 @@
         </div>
       </div>
     </section>
+
+    <!-- Articles -->
+	<section class="container-fluid bg-gray articles px-5 py-5 pt-md-extra">
+		<div class="row">
+			<div class="col-12 px-0 pb-4">
+				<hr class="leading-line">
+				<h3 class="text-xxs text-bold d-inline-block">Who Are We</h3>
+				<h4>From the Blog</h4>
+			</div>
+		</div>
+		<div class="row card-group">
+			<div class="card">
+				<img src="assets/img/blog_post1.jpg" alt="" class="card-img-top">
+				<div class="card-body">
+					<div class="article-heading d-flex justify-content-between pb-2">
+						<span class="text-xxs">News</span>
+						<span class="text-xxs text-secondary">.</span>
+						<span class="text-xxs text-secondary">19 Jan, 2021</span>
+					</div>
+					<p class="font-weight-bold pb-1 mb-0">Top Software Testing Services In 2021: Software Testing
+						Companies.</p>
+					<a href="#0" class="text-xxs">Read more</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <!-- Get in touch -->
     <section class="container-fluid home-contact">
