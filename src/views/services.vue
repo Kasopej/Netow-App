@@ -57,39 +57,34 @@ export default {
     ...mapActions({letStoreFetchServices: 'fetchServicesData', letStoreFetchOffers: 'fetchOffersData'}),
     slidePrev(){
       let slides = document.querySelectorAll('.services-carousel-item');
-      if(this.slide_id < slides.length-1){
-        slides.forEach((el) => {
-          if(el.id <= this.slide_id){
-          el.classList.add('removeToLeft')
-          }
-          else if(el.classList.contains('removeToRight')){
-          el.classList.remove('removeToRight')
-          }
+      slides.forEach((el) => {
+        if(this.slide_id == el.id){
+          console.log(el);
+          document.querySelector('.services-carousel-content').removeChild(el);
+          document.querySelector('.services-carousel-content').append(el);
+        }
       })
-        this.slide_id++;
-        this.reverse_slide_id = (this.reverse_slide_id>0) ? --this.reverse_slide_id : 0;
-        this.justification = 'flex-start';
-        console.log(`${this.slide_id} : ${this.reverse_slide_id}`);
-      }
+      this.slide_id = (this.slide_id < (slides.length-1)) ? ++this.slide_id : 0;
+      this.reverse_slide_id = (this.reverse_slide_id>0) ? --this.reverse_slide_id : 0;
+      this.justification = 'flex-start';
+      console.log(`${this.slide_id} : ${this.reverse_slide_id}`);
+
     },
     slideNext(){
       let slides = document.querySelectorAll('.services-carousel-item');
-      if(this.reverse_slide_id < slides.length-1){
-        slides.forEach((el) => {
-          if(el.id >= (slides.length -1)-this.reverse_slide_id){
-          el.classList.add('removeToRight')
-          }
-          else if(el.classList.contains('removeToLeft')){
-          el.classList.remove('removeToLeft')
-          }
+      slides.forEach((el) => {
+        if(((slides.length -1) - this.reverse_slide_id) == el.id){
+          console.log(el);
+          document.querySelector('.services-carousel-content').removeChild(el);
+          document.querySelector('.services-carousel-content').prepend(el);
+        }
       })
-        this.reverse_slide_id++;
-        this.slide_id = (this.slide_id>0) ? --this.slide_id : 0;
+      this.reverse_slide_id = (this.reverse_slide_id < (slides.length-1)) ? ++this.reverse_slide_id : 0;
+      this.slide_id = (this.slide_id>0) ? --this.slide_id : 0;
         this.justification = 'flex-end';
         console.log(`${this.slide_id} : ${this.reverse_slide_id}`);
       }
       
-    }
   },
   computed: {
     ...mapState({services: 'services', offers: 'offers'}),
