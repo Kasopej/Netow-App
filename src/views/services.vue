@@ -83,7 +83,7 @@ export default {
       this.slide_id = (this.slide_id>0) ? --this.slide_id : 0;
         this.justification = 'flex-end';
         console.log(`${this.slide_id} : ${this.reverse_slide_id}`);
-      }
+      },
       
   },
   computed: {

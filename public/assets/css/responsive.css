@@ -100,7 +100,11 @@
   .blog-post{padding-left: 6rem; padding-right: 6rem;}
   .about-hero{height: 75vh;}
   .services-carousel-content{width: 85vw;}
-.services-carousel-item{margin: inherit; flex-basis: 23%;  margin: 0 5%;}
+  .services-carousel-item{margin: inherit; flex-basis: 23%;  margin: 0 5%;}
+  .services-carousel-item{margin: inherit; flex-basis: 23%;  margin: 0 5%;}
+  .publications-carousel-container{padding-top: 4rem;}
+  .publications-carousel{padding-top: 6rem;}
+  .publications-carousel-item{margin: inherit; flex-basis: 21%;  margin: 0 2%;}
   
 }
 

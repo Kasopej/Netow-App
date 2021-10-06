@@ -8,5 +8,9 @@ export const offers = [
     { name: 'Automated Testing', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
     { name: 'Agile Testing', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
     { name: 'DevOps', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
-]
+];
+
+export const publications = [
+    { img: 'book1.png', id: 0 }, { img: 'book2.png', id: 1 }, { img: 'book3.png', id: 2 }, { img: 'book4.png', id: 3 },
+];
 
