@@ -317,11 +317,24 @@
 <script>
 // @ is an alias to /src
 
-
+import { mapActions, mapState } from "vuex";
 export default {
   name: 'Home',
   components: {
-    
-  }
+    },
+  data() {
+    return {
+      
+    }
+  },
+  created() {
+    this.letStoreGetTestimonialsData()
+  },
+  computed: {
+    ...mapState(['testimonials']),
+  },
+  methods: {
+    ...mapActions({letStoreGetTestimonialsData: 'fetchTestimonialsData'}),
+  },
 }
 </script>

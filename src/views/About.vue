@@ -23,6 +23,37 @@
     </section>
 
     <!-- Other sections to come in here -->
+    <section class="bg-pic our-story text-center">
+      <h2>Our Story</h2>
+      <div class="about-carousel">
+        <p v-for="(story, index) in ourStory" :key="story.id" :id="index">{{story.text}}</p>
+      </div>
+      <div class="about-carousel-controls-group">
+        <div class="about-carousel-controls d-inline-block mx-auto mt-4">
+          <a @click="slide()" class="mx-3 border rounded-circle"><span>&#8592;</span></a>
+          <span>{{current_slide_id + 1}}/2</span>
+          <a @click="slide()" class="mx-3 border rounded-circle"><span>&#8594;</span></a>
+        </div>
+      </div>
+      <div class="about-carousel-image-group px-3 px-md-5">
+        <div class="about-carousel-img d-none" v-for="(story, index) in ourStory" :key="story.id" :id="'story-img-'+index"><img :src="'assets/img/'+story.img" alt="" class="img-fluid"></div>
+      </div>
+    </section>
+
+    <!-- Our Team (range slider) section-->
+    <section class="team">
+      <h2 class="text-lg text-bold">Our <span class="text-brand">Team</span></h2>
+      <div class="team-carousel-container">
+        <div class="card bg-brand" v-for="member in team" :key="member.id">
+          <div class="card-body">
+              <p class="card-title small text-white">{{member.role}}</p>
+              <p class="card-text display-6 text-white mb-0">{{member.name.split(' ')[0]}}</p>
+              <p class="card-text display-6 text-white">{{member.name.split(' ')[1]}}</p>
+              <div><img :src="'assets/img/'+ member.img" alt="" class="img-fluid"></div>
+          </div>
+      </div>
+      </div>
+    </section>
     <!-- Values Section -->
     <section class="values container-fluid">
       <div class="row">
@@ -58,8 +89,44 @@
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
 export default {
+  data() {
 
+    return {
+      current_slide_id: 0,
+    }
+
+  },
+  created() {
+    this.letStoreGetStories();
+    this.letStoreGetTeam();
+  },
+  mounted() {
+    let el = document.getElementById('story-img-0')
+    el.classList.add('show');
+    console.log(document.getElementById('story-img-0'));
+  },
+  computed: {
+    ...mapState(['ourStory', 'team',])
+  },
+  methods: {
+    ...mapActions({letStoreGetStories: 'fetchStoryData', letStoreGetTeam: 'fetchTeamData',}),
+    slide(){
+      let slides = document.querySelectorAll('.about-carousel > p');
+      slides.forEach((el, index) => {
+        let img = document.getElementById('story-img-'+index)
+        img.classList.toggle('show');
+        if(this.current_slide_id == el.id){
+          console.log(el);
+          document.querySelector('.about-carousel').removeChild(el);
+          document.querySelector('.about-carousel').append(el);
+        }
+      })
+      this.current_slide_id = (this.current_slide_id == 0) ? 1 : 0;
+
+    },
+  },
 }
 </script>
 
