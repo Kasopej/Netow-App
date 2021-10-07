@@ -1,7 +1,8 @@
+import { browserCodeIcon, earphonesIcon, rocketIcon } from "./svg";
 export const services = [
-    { name: 'Creative Design', text: 'Designing to us is something magical - we are lucky that our clients let us get creative and build new products, this are the steps we follow through ', icon: '', img: 'creative_draw.png', id: 0, },
-    { name: 'Development', text: 'Every single project is a challenge that we accept eagerly. Lets implement ideas together!', icon: '', img: 'dev_draw.png', id: 1, },
-    { name: 'Support', text: 'Our technical support team is willing to solve any inquiry that comes from our clients with minutes', icon: '', img: 'support_draw.png', id: 2, },
+    { name: 'Creative Design', text: 'Designing to us is something magical - we are lucky that our clients let us get creative and build new products, this are the steps we follow through ', icon: rocketIcon, img: 'creative_draw.png', id: 0, },
+    { name: 'Development', text: 'Every single project is a challenge that we accept eagerly. Lets implement ideas together!', icon: browserCodeIcon, img: 'dev_draw.png', id: 1, },
+    { name: 'Support', text: 'Our technical support team is willing to solve any inquiry that comes from our clients with minutes', icon: earphonesIcon, img: 'support_draw.png', id: 2, },
 ];
 
 export const offers = [
@@ -27,5 +28,5 @@ export const testimonials = [
 ];
 
 export const teamData = [
-    { name: 'Tobi Fagboh', role: 'C.E.O', img: 'boygrey.png', id: 0, }, { name: 'Felix Abayomi', role: 'Senior Tester', img: 'boygrey.png', id: 1, }, { name: 'Ileri Adesanya', role: 'Tester', img: 'boygrey.png', id: 2, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 3, },
+    { name: 'Tobi Fagboh', role: 'C.E.O', img: 'boygrey.png', id: 0, }, { name: 'Felix Abayomi', role: 'Senior Tester', img: 'boygrey.png', id: 1, }, { name: 'Ileri Adesanya', role: 'Tester', img: 'boygrey.png', id: 2, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 3, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 4, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 5, },
 ];

@@ -26,7 +26,7 @@
     <section class="bg-pic our-story text-center">
       <h2>Our Story</h2>
       <div class="about-carousel">
-        <p v-for="(story, index) in ourStory" :key="story.id" :id="index">{{story.text}}</p>
+        <p class="pb-3" v-for="(story, index) in ourStory" :key="story.id" :id="index">{{story.text}}</p>
       </div>
       <div class="about-carousel-controls-group">
         <div class="about-carousel-controls d-inline-block mx-auto mt-4">
@@ -41,18 +41,22 @@
     </section>
 
     <!-- Our Team (range slider) section-->
-    <section class="team">
-      <h2 class="text-lg text-bold">Our <span class="text-brand">Team</span></h2>
-      <div class="team-carousel-container">
-        <div class="card bg-brand" v-for="member in team" :key="member.id">
-          <div class="card-body">
-              <p class="card-title small text-white">{{member.role}}</p>
-              <p class="card-text display-6 text-white mb-0">{{member.name.split(' ')[0]}}</p>
-              <p class="card-text display-6 text-white">{{member.name.split(' ')[1]}}</p>
-              <div><img :src="'assets/img/'+ member.img" alt="" class="img-fluid"></div>
+    <section class="team pt-4">
+      <h2 class="text-lg text-bold px-5">Our <span class="text-brand">Team</span></h2>
+      <div class="team-carousel-container pb-4">
+        <div class="team-carousel-content" :style="{'left': '-'+ leftSlide + 'px'}">
+          <div class="card bg-brand" v-for="member in team" :key="member.id">
+            <div class="card-body">
+                <p class="card-title small text-white">{{member.role}}</p>
+                <p class="card-text display-6 text-white mb-0">{{member.name.split(' ')[0]}}</p>
+                <p class="card-text display-6 text-white">{{member.name.split(' ')[1]}}</p>
+                <div><img :src="'assets/img/'+ member.img" alt="" class="img-fluid"></div>
+            </div>
           </div>
+        </div>
+      <input type="range" name="team" id="teamSlider" min="0" :max="maxRange" value="0" step="0.01" @input="rangeSlide">
       </div>
-      </div>
+      
     </section>
     <!-- Values Section -->
     <section class="values container-fluid">
@@ -94,7 +98,7 @@ export default {
   data() {
 
     return {
-      current_slide_id: 0,
+      current_slide_id: 0, leftSlide: 0, maxRange: 0,
     }
 
   },
@@ -106,9 +110,13 @@ export default {
     let el = document.getElementById('story-img-0')
     el.classList.add('show');
     console.log(document.getElementById('story-img-0'));
+    this.maxRange = (this.viewWidth < 768) ? this.team.length-1 :  this.team.length-4
   },
   computed: {
-    ...mapState(['ourStory', 'team',])
+    ...mapState(['ourStory', 'team',]),
+    viewWidth(){
+      return document.body.clientWidth;
+    }
   },
   methods: {
     ...mapActions({letStoreGetStories: 'fetchStoryData', letStoreGetTeam: 'fetchTeamData',}),
@@ -124,8 +132,11 @@ export default {
         }
       })
       this.current_slide_id = (this.current_slide_id == 0) ? 1 : 0;
-
     },
+    rangeSlide(ev){
+      console.log(ev.target.value);
+      this.leftSlide = (this.viewWidth < 768) ? ev.target.value * (0.85 * this.viewWidth) : ev.target.value * (0.85 * this.viewWidth * 0.35);
+    }
   },
 }
 </script>
