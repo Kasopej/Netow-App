@@ -1,13 +1,13 @@
 <template>
   <div>
     <section class="container-fluid lg-padding text-center bg-pic mb-5">
-        <div class="row mb-5 pb-5">
+        <div class="row mb-5 pb-5 career-hero">
             <div class="col-12 col-md-6 text-left px-1">
                 <h5 class="text-uppercase text-brand">Welcome To Netow</h5>
                 <h2 class="heading-md text-brand font-weight-bold">Creative Software Testing Comapany</h2>
-                <p class="small text-brand">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nihil sequi
+                <p class="text-md text-brand">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nihil sequi
                     distinctio sint.</p>
-                <a href="#"><button class="btn btn-md btn-outline-none px-4 text-white bg-blue font-weight-bold">Join
+                <a href="#"><button class="btn btn-md btn-outline-none rounded px-5 py-3 mt-4 text-white bg-brand font-weight-bold">Join
                         Us</button></a>
             </div>
             <div class="col-12 col-md-6 px-1"><img src="assets/img/career.PNG" alt="" class="img-fluid rounded-lg"></div>
@@ -111,62 +111,34 @@
     <!-- REUSABLE (Testimonials) -->
     <section class="container-fluid padding">
         <!--Testimonials-->
-        <div class="row text-center testimonials">
-            <p class="col-12 font-weight-bold mb-1">Testimonials</p>
-            <h3 class="col-12 bolder mb-5">What Clients Say</h3>
-            <div class="col-12 col-md-4 testimonials-box">
-                <blockquote>
-                    <i class="fa fa-quote-right"></i>
-                    <p class="text-secondary display-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla odio vero eum molestias
-                        nobis aperiam iure itaque ullam ratione voluptates, cum aspernatur, pariatur facere omnis at
-                        voluptatem. Dolorum, illo.
-                    </p>
-                </blockquote>
-                <div class="pointer"></div>
-                <br>
-                <img src="img/team1.png" alt="" class="rounded-circle">
-                <p class="display-6 mb-0 mt-2 font-weight-bold">Samuel Eghe</p>
-                <p><small>CEO, Saed</small></p>
-            </div>
-            <div class="col-12 col-md-4 testimonials-box">
-                <blockquote>
-                    <i class="fa fa-quote-right"></i>
-                    <p class="text-white display-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla odio vero eum molestias
-                        nobis aperiam iure itaque ullam ratione voluptates, cum aspernatur, pariatur facere omnis at
-                        voluptatem. Dolorum, illo.
-                    </p>
-                </blockquote>
-                <div class="pointer"></div>
-                <br>
-                <img src="img/team2.png" alt="" class="rounded-circle">
-                <p class="display-6 mb-0 mt-2 font-weight-bold">Ademola Fagbo</p>
-                <p class="display-7">Programmer</p>
-            </div>
-            <div class="col-12 col-md-4 testimonials-box">
-                <blockquote>
-                    <i class="fa fa-quote-right"></i>
-                    <p class="text-secondary display-6">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nulla odio vero eum molestias
-                        nobis aperiam iure itaque ullam ratione voluptates, cum aspernatur, pariatur facere omnis at
-                        voluptatem. Dolorum, illo.
-                    </p>
-                </blockquote>
-                <div class="pointer"></div>
-                <br>
-                <img src="img/team3.png" alt="" class="rounded-circle">
-                <p class="display-6 mb-0 mt-2 font-weight-bold">Rita Grace</p>
-                <p class="display-7">Konga Rep</p>
-            </div>
-        </div>
+        <Testimonials :testimonials="testimonials"/>
     </section>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from "vuex";
+import Testimonials from "@/components/testimonial";
 export default {
+  data() {
 
+    return {
+      
+    }
+
+  },
+  components: {
+    Testimonials
+  },
+  created() {
+    this.letStoreGetTestimonials();
+  },
+  computed: {
+    ...mapState(['testimonials']),
+  },
+  methods: {
+    ...mapActions({letStoreGetTestimonials: 'fetchTestimonialsData'}),
+  },
 }
 </script>
 
