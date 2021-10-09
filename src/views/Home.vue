@@ -200,14 +200,14 @@
     <!-- Timeline -->
     <section @mouseenter="autoTimelineSlide" @mouseleave="stopAutoTimelineSlide" class="container-fluid bg-brand timeline-section pr-0 text-white pl-5">
       <div class="row" v-for="(timeline, index) in timelines" :key="timeline.id" :id="index">
-        <div class="col-4 col-md-2">
+        <div class="col-5 col-md-2">
           <div class="fancy-text-box">
             <span class="fancy-text">{{timeline.time[0]}}</span>
             <span class="fancy-text">{{timeline.time[1]}}</span>
           </div>
         </div>
 
-        <div class="col-8 col-md-5 px-5 pb-5">
+        <div class="col-7 col-md-5 px-2 px-md-3 pb-5">
           <h2 class="text-bold">{{timeline.heading}}</h2>
           <p class="text-sm">{{timeline.text}}</p>
         </div>
