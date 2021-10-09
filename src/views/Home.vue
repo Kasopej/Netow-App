@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid p-0">
-    <section @mouseenter="autoSlide" @mouseleave="stopAutoSlide" class="home-banner bg-brand text-center text-white">
+    <section @mouseenter="autoHeroSlide" @mouseleave="stopAutoHeroSlide" class="home-banner bg-brand text-center text-white">
 		<div id="bannerCarousel" class="banner-carousel" data-ride="carousel">
 
 			<div class="banner-carousel-indicators">
@@ -70,6 +70,7 @@
       </div>
     </section>
 
+    <!-- Our Services -->
     <section class="container-fluid bg-pic p-2 pb-4 pt-5">
       <div class="core-services-carousel-container">
           <div class="core-services-carousel text-center">
@@ -198,8 +199,8 @@
     </section>
 
     <!-- Timeline -->
-    <section class="container-fluid bg-brand timeline-section pr-0 text-white pl-5">
-      <div class="row" v-for="timeline in timelines" :key="timeline.id">
+    <section @mouseenter="autoTimelineSlide" @mouseleave="stopAutoTimelineSlide" class="container-fluid bg-brand timeline-section pr-0 text-white pl-5">
+      <div class="row" v-for="(timeline, index) in timelines" :key="timeline.id" :id="index">
         <div class="col-4 col-md-2">
           <div class="fancy-text-box">
             <span class="fancy-text">{{timeline.time[0]}}</span>
@@ -212,7 +213,7 @@
           <p class="text-sm">{{timeline.text}}</p>
         </div>
 
-        <div class="col-12 col-md-5 timeline-img-container py-5">
+        <div class="col-12 col-md-5 timeline-img-container py-5" :class="{'transparent-img': (index==3) ? true : false}">
           <img :src="'assets/img/'+timeline.img" alt="" class="img-fluid">
         </div>
       </div>
@@ -315,7 +316,7 @@ export default {
   data() {
 
     return {
-      slide_id: 0, reverse_slide_id: 0, hero_slide_id: 0, hero_reverse_slide_id: 0, justification: 'flex-start', heroLeftArrow: heroLeftArrow, heroRightArrow: heroRightArrow, hero_justification: 'flex-start', autoSlideSetInterval: 0,
+      slide_id: 0, reverse_slide_id: 0, hero_slide_id: 0, hero_reverse_slide_id: 0, testimonial_slide_id: 0, testimonial_reverse_slide_id: 0, justification: 'flex-start', heroLeftArrow: heroLeftArrow, heroRightArrow: heroRightArrow, hero_justification: 'flex-start', autoSlideSetInterval: 0,
     }
 
   },
@@ -407,12 +408,30 @@ export default {
         });
         
     },
-    autoSlide(){
+    autoHeroSlide(){
       this.autoSlideSetInterval = setInterval(this.slideHeroNext, 2000);
     },
-    stopAutoSlide(){
+    stopAutoHeroSlide(){
       clearInterval(this.autoSlideSetInterval)
-    }
+    },
+    slideTimelinePrev(){
+      let slides = document.querySelectorAll('.timeline-section > .row');
+      slides.forEach((el) => {
+        if(this.timeline_slide_id == el.id){
+          console.log(el);
+          document.querySelector('.timeline-section').removeChild(el);
+          document.querySelector('.timeline-section').append(el);
+        }
+      })
+      this.timeline_slide_id = (this.timeline_slide_id < (slides.length-1)) ? ++this.timeline_slide_id : 0;
+      this.timeline_reverse_slide_id = (this.timeline_reverse_slide_id>0) ? --this.timeline_reverse_slide_id : 0;
+    },
+    autoTimelineSlide(){
+      this.autoSlideSetInterval = setInterval(this.slideTimelinePrev, 3000);
+    },
+    stopAutoTimelineSlide(){
+      clearInterval(this.autoSlideSetInterval)
+    },
   },
 }
 </script>

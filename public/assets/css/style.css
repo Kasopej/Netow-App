@@ -142,14 +142,14 @@ a:hover {text-decoration: none;}
 .home-our-services-item a {color: inherit !important;}
 
 /* Timeline Section */
-.timeline-section {padding-top: 5rem;}
-.timeline-section{flex-wrap: nowrap; overflow-x: hidden; display: flex;}
+.timeline-section{padding-top: 5rem; flex-wrap: nowrap; overflow-x: hidden; display: flex; justify-content: flex-start;}
 .timeline-section > div {flex-basis: 100%; flex-grow: 0; flex-shrink: 0; margin: 0;}
 .timeline-img-container {
   background-color: white;
   border-top-left-radius: 100px;
   border-bottom: none;
 }
+.transparent-img{background-color: transparent !important;}
 .fancy-text-box {
   position: absolute;
   right: 0;

@@ -6,7 +6,8 @@
                 <h5 class="text-uppercase text-brand">Welcome To Netow</h5>
                 <h2 class="heading-md text-brand font-weight-bold">Creative Software Testing Comapany</h2>
                 <p class="text-md text-brand">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam nihil sequi
-                    distinctio sint.</p>
+                    distinctio sint.
+                </p>
                 <a href="#"><button class="btn btn-md btn-outline-none rounded px-3 px-md-5 py-1 py-md-3 mt-2 mt-md-4 mb-3 mb-md-0 text-white bg-brand font-weight-bold">Join
                         Us</button></a>
             </div>
@@ -16,6 +17,7 @@
         <!--Brands we work with-->
         <Brands />
     </section>
+    
     <!-- Testimonials -->
     <section class="container-fluid px-4 pb-5">
         <!--Testimonials-->

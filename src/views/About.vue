@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <!-- Other sections to come in here -->
+    <!-- Our Story -->
     <section class="bg-pic our-story text-center">
       <h2 class="pb-4">Our <span class="text-brand">Story</span></h2>
       <div class="about-carousel">
@@ -83,11 +83,7 @@
             <hr class="values-hr">
           </div>
         </div>
-
-      
-
       </div>
-
     </section>
   </div>
 </template>
