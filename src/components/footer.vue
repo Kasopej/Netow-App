@@ -2,7 +2,7 @@
   <footer class="container-fluid lg-padding bg-brand">
       <div class="row">
       <div class="col-12 col-lg-3 pt-1 pb-3 pb-md-0">
-        <div class="footer-brand bg-white"><a href="index.html"><img src="assets/img/netow_logo_small.png" alt=""></a>
+        <div class="footer-brand bg-white"><router-link to="/"><img src="assets/img/netow_logo_small.png" alt=""></router-link>
         </div>
       </div>
       <div class="col-12 col-lg-3">
@@ -15,16 +15,16 @@
         <h3 class="display-6">Links</h3>
         <ul class="flush-list footer-links">
           <li>
-            <a href="Blog.html">Blog</a>
+            <router-link to="/blog">Blog</router-link>
           </li>
           <li>
-            <a href="About us.html">About Us</a>
+            <router-link to="/about">About Us</router-link>
           </li>
           <li>
-            <a href="Services.html">Our Doings</a>
+            <router-link to="/services">Services</router-link>
           </li>
           <li>
-            <a href="careers.html">Careers</a>
+            <router-link to="/blog">Careers</router-link>
           </li>
         </ul>
       </div>

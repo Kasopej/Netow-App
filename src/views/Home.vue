@@ -42,8 +42,7 @@
 					<img :src="'assets/img/'+ hero.img" class="d-block img-fluid m-auto" alt="">
 					<div class="carousel-caption">
 						<h2>{{hero.text}}</h2>
-						<button
-							class="btn bg-none mt-2 mt-sm-3 text-sm border border-inherit rounded home-banner-button">{{hero.action}}</button>
+						<router-link to="/contact" class="btn bg-none mt-2 mt-sm-3 text-sm border border-inherit rounded home-banner-button">{{hero.action}}</router-link>
 					</div>
 				</div>
 			</div>
@@ -64,8 +63,8 @@
             testing company in Nigeria. As a software testing company, we enable our clients to increase both
             the quality of the software they produce and the efficiency of test delivery by optimizing their
             testing processes.</p>
-          <a href="#" class="btn rounded-lg bg-none border border-black border-2 text-sm text-bold">Our
-            Services</a>
+          <router-link to="/services" class="btn rounded-lg bg-none border border-black border-2 text-sm text-bold">Our
+            Services</router-link>
         </div>
       </div>
     </section>
@@ -244,7 +243,7 @@
 						<span class="text-xxs text-secondary">{{post.postDate}}</span>
 					</div>
 					<p class="font-weight-bold pb-1 mb-0">{{post.title}}</p>
-					<a href="#0" class="text-xxs">Read more</a>
+					<router-link to="/blog" class="text-xxs">Read more</router-link>
 				</div>
 			</div>
 		</div>

@@ -107,7 +107,8 @@ a:hover {text-decoration: none;}
   color: white;
 }
 
-.home-banner-button:hover {background-color: rgba(255, 255, 255, 0.514) !important;}
+.home-banner-button:hover {background-color: rgba(255, 255, 255, 0.85) !important; border: none !important; color: black;}
+.btn:hover{color: initial;}
 
 /* Home Page Services Carousel */
 #homeServicesCarousel, #homeServicesCarousel1 {padding: 0.5rem 2rem;}

@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-brand">
-      <a class="navbar-brand bg-white mr-lg-5" href="#"><img src="assets/img/netow_logo_small.png" alt="Netow Logo"></a>
+      <router-link to="/" class="navbar-brand bg-white mr-lg-5" href="#"><img src="assets/img/netow_logo_small.png" alt="Netow Logo"></router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -10,6 +10,7 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active pr-3">
+
             <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">

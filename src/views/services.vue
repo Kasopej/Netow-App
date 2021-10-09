@@ -28,7 +28,7 @@
               <div v-for="(offer, index) in offers" :key="offer.id" :id="index" class="services-carousel-item bg-white p-3 text-brand">
                 <h4>{{offer.name}}</h4>
                 <p>{{offer.text}}</p>
-                <button class="btn bg-none">Learn More</button>
+                <router-link to="/contact/#" class="btn bg-none">Get in Touch</router-link>
               </div>
             </transition-group>
           </div>

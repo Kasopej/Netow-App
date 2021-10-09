@@ -2,7 +2,7 @@
     <div>
         <!-- Contact Intro -->
     <section
-      class="container-fluid contact-intro bg-brand text-center text-white"
+      class="container-fluid contact-intro bg-brand text-center text-white" id="top"
     >
       <h2 class="heading">Let’s Help You Test It’s Bug Free</h2>
       <p>
