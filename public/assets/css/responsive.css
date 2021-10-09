@@ -42,6 +42,8 @@
   .home-services-carousel-items {padding: 0 2rem;}
   .home-services-carousel-indicators{left: 20px;}
   .timeline-section {padding-top: 8rem !important;}
+  .fancy-text {
+    font-size: 6rem; }
   .home-banner img {max-height: 95vh;}
   .home-our-services {padding: 4rem 8rem 4rem 12rem !important;}
   .testimonials-box{padding-left: 10px; padding-right: 10px;}

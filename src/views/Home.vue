@@ -207,7 +207,7 @@
           </div>
         </div>
 
-        <div class="col-7 col-md-5 px-2 px-md-3 pb-5">
+        <div class="col-7 col-md-5 px-3 px-md-3 pb-5">
           <h2 class="text-bold">{{timeline.heading}}</h2>
           <p class="text-sm">{{timeline.text}}</p>
         </div>
