@@ -10,7 +10,7 @@
         id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item active pr-3">
-            <router-link to="/" class="nav-link active">Home</router-link>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link">About</router-link>
@@ -41,7 +41,34 @@
 <script>
 export default {
     name: 'Header',
+    /*
+    computed: {
+      active(){
+        let menuLinks = Array.from(document.getElementsByClassName('nav-link'));
+        let isActive = '';
+        menuLinks.forEach(element => {
+          if(element.textContent === this.$router.currentRoute.name){
+            isActive = true ;
+          }
+        });
+        return {active: isActive,};
+      }
+    },
+    */
 }
+function findActive(){
+  let links = Array.from(document.getElementsByClassName('nav-link'));
+  links.forEach((el) => {
+    if(el.classList.contains('router-link-exact-active')) {
+      el.innerHTML = '<s>' + el.innerHTML + '</s>';
+    }
+    else {el.innerHTML = '<a>'+ el.textContent + '</a>'}
+  })
+  
+}
+window.onload =findActive;
+document.body.onclick = findActive;
+
 </script>
 
 <style>

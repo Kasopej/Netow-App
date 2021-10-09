@@ -1,6 +1,12 @@
+@media screen and (min-width: 450px) {
+  .banner-carousel-indicators{bottom: -75vw;}
+}
 @media screen and (min-width: 576px) { 
   h2 {font-size: 2.5rem;}
   
+  .home-banner {
+    padding: 40px 4rem 100px 4rem;
+  }
   .home-banner {
     padding-top: 0;
   }
@@ -9,10 +15,9 @@
   left: 1rem;
   right: 1rem;
   }
-  .our-story{padding-top: 40vw;}
-  .banner-carousel-indicators{
-    bottom: -80px;
-  }
+  .banner-carousel-indicators{bottom: -65vw;}
+  .about-hero{height: 75vh;}
+  .our-story{padding-top: 60vw;}
   .article-heading {width: 75%;}
 }
 
@@ -30,24 +35,24 @@
     left: 4rem;
     right: 4rem;
   }
-  .banner-carousel-indicators{
-    bottom: 50px;
-  }
+  .banner-carousel-indicators{bottom: -45vw;}
   #homeServicesCarousel .carousel-inner {
     padding: 0 3rem;
   }
   .home-services-carousel-items {padding: 0 2rem;}
   .home-services-carousel-indicators{left: 20px;}
-  .mobile-section {padding-top: 8rem !important;}
+  .timeline-section {padding-top: 8rem !important;}
   .home-banner img {max-height: 95vh;}
   .home-our-services {padding: 4rem 8rem 4rem 12rem !important;}
+  .testimonials-box{padding-left: 10px; padding-right: 10px;}
+  blockquote{padding: 0.7rem;}
   .brand-row {padding: 2rem 5rem;}
   .brand-box {padding: 0.5rem !important;}
   .brand-box .h3 {font-size: 1.5rem !important;}
   .articles .card {padding: 0 0.5rem;}
 
   /* Contact Page */
-  .contact-intro {padding: 5rem 20rem 20rem 20rem;}
+  .contact-intro {padding: 5rem 10rem 20rem 10rem;}
   .contact-main {padding: 5rem;}
   .contact-main .row > div:first-of-type{padding: 0 10rem;}
   .form {
@@ -64,8 +69,8 @@
 
   /* Services Page styling */
 .services-container {padding: 4rem 14rem;}
-.our-services-carousel-container {padding: 4rem;}
-.our-services-carousel-container .carousel-inner {padding: 4rem 8rem;}
+.services-carousel-content, .our-services-carousel-content{width: 80%;}
+.services-carousel-prev, .services-carousel-next, .core-services-carousel-prev, .core-services-carousel-next {width: 10%;}
 
 /* About */
 .about-hero{height: 50vh;}
@@ -75,7 +80,7 @@
   .about-hero-img-container:nth-of-type(2){grid-area: 1/2/span 1/span 1;}
   .about-hero-img-container:nth-of-type(3){grid-area: 2/2/span 1/span 1;}
   .about-hero-img-container:nth-of-type(4){grid-area: 1/3/span 2/span 1;}
-  .our-story{padding-top: 30vw;}
+  .our-story{padding-top: 39vw;}
   .values{padding-top: 2rem;}
   .team .card{width: 23%; margin: 0 5% 0 0;}
 
@@ -96,20 +101,21 @@
     left: 8rem;
     right: 8rem;
   }
-  .banner-carousel-indicators{
-    bottom: 1px;
-  }
+  .banner-carousel-indicators{bottom: -40vw;}
   .home-our-services {padding: 5rem 12rem 5rem 16rem !important;}
+  .testimonials-box{padding-left: 15px; padding-right: 15px;}
+  blockquote{padding: 1.5rem;}
   .article-heading {width: 50%;}
   .blog-hero .heading {padding-left: 15rem; padding-right: 15rem;}
   .blog-post{padding-left: 6rem; padding-right: 6rem;}
   .about-hero{height: 75vh;}
-  .our-story{padding-top: 20vw;}
-  .services-carousel-content{width: 85vw;}
-  .services-carousel-item{margin: inherit; flex-basis: 27%;  margin: 0 3%;}
+  .our-story{padding-top: 29vw;}
+  .services-carousel-content, .core-services-carousel-content{width: 90%;}
+  .services-carousel-item, .core-services-carousel-item{margin: inherit; flex-basis: 31%;  margin: 0 1%;}
   .publications-carousel-container{padding-top: 4rem;}
   .publications-carousel{padding-top: 6rem;}
   .publications-carousel-item{margin: inherit; flex-basis: 21%;  margin: 0 2%;}
+  .contact-intro {padding: 5rem 20rem 20rem 20rem;}
   
 }
 
@@ -132,5 +138,5 @@
     right: 16rem;
   }
   .article-heading {width: 30%;}
-  .values{padding-top: 25rem;}
+  .values{padding-top: 5rem;}
 }

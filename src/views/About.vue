@@ -24,7 +24,7 @@
 
     <!-- Other sections to come in here -->
     <section class="bg-pic our-story text-center">
-      <h2>Our Story</h2>
+      <h2 class="pb-4">Our <span class="text-brand">Story</span></h2>
       <div class="about-carousel">
         <p class="pb-3" v-for="(story, index) in ourStory" :key="story.id" :id="index">{{story.text}}</p>
       </div>

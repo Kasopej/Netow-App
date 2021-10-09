@@ -62,12 +62,13 @@ a:hover {text-decoration: none;}
   background-color: white;
 }
 .navbar .navbar-nav .nav-item .nav-link {color: white; font-weight: 500;}
+.nav-link.active{text-decoration: underline;}
 .search-form {position: relative;
-              
-}
+} 
 .search-form input {
   width: 12rem !important;
   border-radius: 30px;
+  caret-color: white;
 }
 
 .search-button{
@@ -82,19 +83,18 @@ a:hover {text-decoration: none;}
 /* Home Banner Section */
 
 .home-banner {
-  padding: 40px 4rem 100px 4rem;
+  padding: 40px 1rem 100px 1rem;
 }
 .banner-carousel-indicators {
-  position: absolute;
+  position: relative;
   z-index: 10;
-  bottom: -110px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  left: -23px;
+  bottom: -40vh;
 }
-.banner-carousel-navigation a {color: rgba(111, 156, 200, 1);}
-.banner-carousel-navigation .active {color: white !important;}
+.banner-carousel-indicators >div:nth-of-type(1){float: left; position: relative; z-index: 20;}
+.banner-carousel-indicators >div:nth-of-type(2){float: right; position: relative; z-index: 20;}
+.banner-carousel-indicators >div:nth-of-type(3){display: block; position: absolute; left: 0; right: 0; text-align: center;}
+.banner-carousel-indicator {color: rgba(111, 156, 200, 1) !important;}
+.banner-carousel-indicator.active {color: white !important;}
 
 .home-banner .carousel-caption {
   bottom: -8px;
@@ -141,9 +141,11 @@ a:hover {text-decoration: none;}
 }
 .home-our-services-item a {color: inherit !important;}
 
-/* Mobile Themed Section */
-.mobile-section {padding-top: 5rem;}
-.mobile-img-container {
+/* Timeline Section */
+.timeline-section {padding-top: 5rem;}
+.timeline-section{flex-wrap: nowrap; overflow-x: hidden; display: flex;}
+.timeline-section > div {flex-basis: 100%; flex-grow: 0; flex-shrink: 0; margin: 0;}
+.timeline-img-container {
   background-color: white;
   border-top-left-radius: 100px;
   border-bottom: none;
@@ -163,6 +165,7 @@ a:hover {text-decoration: none;}
   
 
 /* Testimonials */
+.careers{padding: 8% 15%;}
 .career-hero button{border-radius: 10px; box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.404)}
 .testimonials img {
   height: 50px;
@@ -270,18 +273,21 @@ blockquote {
 
 /* Services Page styling */
 .services-container {padding: 4rem 4rem;}
-.services-carousel{position: relative;}
+.services-carousel, .core-services-carousel, .banner-carousel{position: relative;}
 .services-carousel-container{border-radius: 9px;}
-.services-carousel-content{width: 80vw; flex-wrap: nowrap; overflow-x: hidden; display: flex; margin: auto;}
-.services-carousel-item{margin: inherit; flex-basis: 80%; flex-grow: 0; flex-shrink: 0; margin: 0 10%; background-color: rgba(111, 156, 200, 0.5); position: relative; border-radius: 5px;}
+.services-carousel-content, .core-services-carousel-content, .banner-carousel-content{width: 100%; flex-wrap: nowrap; overflow-x: hidden; display: flex; margin: auto;}
+.services-carousel-item{flex-basis: 80%; flex-grow: 0; flex-shrink: 0; margin: 0 10%; background-color: rgba(111, 156, 200, 0.5); position: relative; border-radius: 5px;}
+.core-services-carousel-item{flex-basis: 80%; flex-grow: 0; flex-shrink: 0; margin: 0 10%; position: relative;}
+.banner-carousel-item{flex-basis: 100%; flex-grow: 0; flex-shrink: 0; position: relative;}
 .services-carousel-content .btn{border: solid 1px #20345c;;}
-.services-carousel-prev, .services-carousel-next {position: absolute; width: 10vw; top: 0; bottom: 0;}
-.services-carousel-prev{left: 0;}
-.services-carousel-next{right: 0;}
-.services-carousel-link:hover{cursor: pointer;}
-.services-carousel-indicator.active{background-color: rgba(255, 255, 255, 0.15);}
-.our-services-carousel-container {padding: 1rem;}
-.our-services-carousel-container .carousel-inner {padding: 2rem 4rem;}
+.services-carousel-prev, .services-carousel-next, .core-services-carousel-prev, .core-services-carousel-next{position: absolute; width: 5%; top: 0; bottom: 0;}
+.services-carousel-prev, .services-carousel-next{margin-left: 10px; margin-right: 10px;}
+.services-carousel-prev, .core-services-carousel-prev{left: 0;}
+.services-carousel-next, .core-services-carousel-next{right: 0;}
+.services-carousel-link:hover, .core-services-carousel-link:hover{cursor: pointer;}
+.core-services-carousel-link span{padding: 2px 5px; font-size: 10px;}
+.services-carousel-indicator.active, .core-services-carousel-indicator.active{background-color: rgba(255, 255, 255, 0.15);}
+.core-services-carousel-indicator.active{background-color: rgba(128, 128, 128, 0.76)}
 .services-grid-item {
   display: grid !important;
   grid-template-columns: auto auto auto;
@@ -292,7 +298,7 @@ blockquote {
 
 
 /* About */
-.about-hero{height: 75vh; padding-bottom: 10rem;}
+.about-hero{height: 90vh; padding-bottom: 10rem;}
 .about-hero-text{padding: 3rem 2rem 2rem 2rem;}
 .about-hero-images{text-align: center; width: 100vw; margin-top: -30px;}
 .about-hero-images figure {border-radius: 10px; height: 40vw; width: 40vw; box-sizing: border-box; display: inline-block; margin: 0 15px 0 15px; background-repeat: no-repeat; background-position: center center; background-size: cover; position: relative;}
@@ -304,9 +310,10 @@ blockquote {
 .about-carousel{width: 90vw; flex-wrap: nowrap; overflow-x: hidden; display: flex; margin: auto; justify-content: flex-start;}
 .about-carousel > p {flex-basis: 90%; flex-grow: 0; flex-shrink: 0; margin: 0 5%; font-size: 1.3rem;}
 .about-carousel-controls-group, .about-carousel > p{position: relative; z-index: 2; background-color: transparent;}
+.about-carousel-controls a:hover{cursor: pointer;}
 .about-carousel-controls > span{font-weight: 600;}
 .about-carousel-image-group{margin-top: -2rem; position: relative; z-index: 1;}
-.our-story{padding-top: 65vw; padding-bottom: 200px;}
+.our-story{padding-top: 89vw; padding-bottom: 200px;}
 .show{display: block !important;}
 .about-carousel-controls > a {border-color: rgba(0, 0, 0, 0.23); padding: 3px 5px;}
 .team {margin-top: -90px; background-color: white;}
@@ -371,6 +378,7 @@ footer a {
   color: inherit;
   display: inline-block;
   margin-bottom: 2rem;
+  overflow-wrap: anywhere;
 }
 footer a:hover {
   text-decoration: none;

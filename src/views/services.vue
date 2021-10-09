@@ -52,7 +52,7 @@ export default {
   data() {
 
     return {
-      slide_id: 0, reverse_slide_id: 0, justification: 'flex-start'
+      slide_id: 0, reverse_slide_id: 0, justification: 'flex-start',
     }
 
   },
@@ -76,8 +76,8 @@ export default {
       this.justification = 'flex-start';
       let indicators = Array.from(document.getElementsByClassName('services-carousel-indicator'));
       indicators.forEach((el,index) => {
-        (this.slide_id == index) ? el.classList.add('active') : el.classList.remove('active')
-      })
+        (this.slide_id == index) ? el.classList.add('active') : el.classList.remove('active');
+      });
       
 
     },
@@ -92,16 +92,16 @@ export default {
       })
       this.reverse_slide_id = (this.reverse_slide_id < (slides.length-1)) ? ++this.reverse_slide_id : 0;
       this.slide_id = (this.slide_id>0) ? --this.slide_id : 0;
-        this.justification = 'flex-end';
-        console.log(`${this.slide_id} : ${this.reverse_slide_id}`);
-      },
+      this.justification = 'flex-end';
+      let indicators = Array.from(document.getElementsByClassName('services-carousel-indicator'));
+      indicators.forEach((el,index) => {
+        (this.reverse_slide_id == index) ? el.classList.add('active') : el.classList.remove('active');
+        });
+    },
       
   },
   computed: {
     ...mapState({services: 'services', offers: 'offers'}),
-    minSlides(){
-      return 2-1;
-    }
   },
 }
 </script>

@@ -7,8 +7,8 @@ export const services = [
 
 export const offers = [
     { name: 'Automated Testing', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
-    { name: 'Agile Testing', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
-    { name: 'DevOps', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 0, },
+    { name: 'Agile Testing', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 1, },
+    { name: 'DevOps', text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.", id: 2, },
 ];
 
 export const publications = [
@@ -30,3 +30,18 @@ export const testimonials = [
 export const teamData = [
     { name: 'Tobi Fagboh', role: 'C.E.O', img: 'boygrey.png', id: 0, }, { name: 'Felix Abayomi', role: 'Senior Tester', img: 'boygrey.png', id: 1, }, { name: 'Ileri Adesanya', role: 'Tester', img: 'boygrey.png', id: 2, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 3, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 4, }, { name: 'Mubarak Aderopo', role: 'Junior Tester', img: 'boygrey.png', id: 5, },
 ];
+
+export const siteHeroData = [
+    { img: 'girl_jacket.png', text: 'We Test & Analyse Till It’s Bug Free', action: 'Get in touch', id: 0, },
+    { img: 'girl_jacket.png', text: 'We Test & Analyse Till It’s Problem Free', action: 'Get in touch now', id: 1, },
+    { img: 'girl_jacket.png', text: 'We Test & Analyse Till It’s Perfect', action: 'Buy now', id: 2, },
+    { img: 'girl_jacket.png', text: 'We Test & Analyse Till It’s Awesome', action: 'Learn more', id: 3, },
+    { img: 'girl_jacket.png', text: 'We Test & Analyse Till It’s Problem Free', action: 'Click here!', id: 4, },
+];
+
+export const timelineData = [
+    { heading: 'How we started', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. ', time: ['20', '18'], img: 'timeline-1.png', id: 0 },
+    { heading: 'How its going', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. ', time: ['20', '19'], img: 'timeline-2.png', id: 1 },
+    { heading: 'Netow solutions', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. ', time: ['20', '18'], img: 'timeline-3.png', id: 2 },
+    { heading: 'Taking over', text: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. ', time: ['Ne', 'xt'], img: 'timeline-4.png', id: 3 },
+]

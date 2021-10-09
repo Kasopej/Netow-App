@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { services, offers, publications, ourStory, testimonials, teamData } from "@/shared/data.js";
+import { services, offers, publications, ourStory, testimonials, teamData, siteHeroData, timelineData } from "@/shared/data.js";
 import { postsData } from "@/shared/blog-data.js";
 
 Vue.use(Vuex)
 
-const state = { services: [], offers: [], publications: [], postsData: [], ourStory: [], testimonials: [], team: [], };
+const state = { services: [], offers: [], publications: [], postsData: [], ourStory: [], testimonials: [], team: [], siteHeroes: [], timelines: [], };
 const mutations = {
   populateStoreServices(state, data) {
     state.services = data;
@@ -27,6 +27,12 @@ const mutations = {
   },
   populateStoreTeamData(state, data) {
     state.team = data;
+  },
+  populateStoreSiteHeroData(state, data) {
+    state.siteHeroes = data;
+  },
+  populateStoreTimelineData(state, data) {
+    state.timelines = data;
   }
 };
 const actions = {
@@ -57,6 +63,14 @@ const actions = {
   fetchTeamData({ commit }) {
     const data = teamData;
     commit('populateStoreTeamData', data)
+  },
+  fetchSiteHeroes({ commit }) {
+    const data = siteHeroData;
+    commit('populateStoreSiteHeroData', data);
+  },
+  fetchTimelineData({ commit }) {
+    const data = timelineData;
+    commit('populateStoreTimelineData', data);
   }
 };
 const getters = {};
